@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GDG DevFest 2026 - Tech Talk at SAGE University Indore. Join us for frontend fundamentals, UI/UX basics, and networking.">
+    <meta name="keywords" content="GDG, DevFest, 2026, SAGE University, Tech Conference, Frontend Development">
+    <meta name="author" content="GDG Community">
+    <title>GDG DevFest 2026 | SAGE University Indore</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ===================================
+         NAVBAR - Sticky navigation bar
+         =================================== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <div class="gdg-logo">GDG</div>
+                <span>GDG DevFest 2026</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#speaker">Speaker</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#register">Register</a>
+                <!-- Live Clock - Updates every second -->
+                <span class="live-clock" id="liveClock"></span>
+                <!-- Dark Mode Toggle -->
+                <button class="dark-mode-toggle" id="darkModeToggle">🌙 Dark</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================================
+         HERO SECTION
+         =================================== -->
+    <section class="hero">
+        <div class="container">
+            <h1>GDG DevFest 2026</h1>
+            <p class="subtitle">Tech Talk @ SAGE University Indore</p>
+            <p class="tagline">Learn, Build, Network with the GDG Community</p>
+
+            <!-- Event Info Cards -->
+            <div class="event-info">
+                <div class="info-card">
+                    <h3>Date</h3>
+                    <p>22 January 2026</p>
+                </div>
+                <div class="info-card">
+                    <h3>Time</h3>
+                    <p>11:00 AM</p>
+                </div>
+                <div class="info-card">
+                    <h3>Venue</h3>
+                    <p>Seminar Hall, M Block<br>SAGE University Indore</p>
+                </div>
+            </div>
+
+            <!-- Event Badges -->
+            <div class="badges">
+                <span class="badge">In-Person</span>
+                <span class="badge green">Free Entry</span>
+            </div>
+
+            <!-- Countdown Timer - Updates every second -->
+            <div class="countdown">
+                <h2>Event Starts In</h2>
+                <div class="countdown-timer" id="countdownTimer">
+                    <div class="time-unit">
+                        <span class="time-value" id="days">00</span>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="hours">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="minutes">00</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="seconds">00</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================
+         ABOUT SECTION
+         =================================== -->
+    <section id="about">
+        <div class="container">
+            <h2>About DevFest 2026</h2>
+            <p>
+                Join us for GDG DevFest 2026, an exciting tech session focusing on frontend fundamentals 
+                and modern UI/UX practices. This interactive event brings together developers, designers, 
+                and tech enthusiasts to explore the latest trends in web development. Learn practical tips, 
+                engage in Q&A sessions with industry experts, and network with the vibrant GDG community. 
+                Whether you're a beginner or experienced developer, this event offers valuable insights to 
+                enhance your skills and connect with like-minded professionals.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===================================
+         SPEAKER SECTION
+         =================================== -->
+    <section id="speaker">
+        <div class="container">
+            <h2>Featured Speaker</h2>
+            <div class="speaker-card">
+                <div class="speaker-photo">AK</div>
+                <h3>Ayushi Kushwah</h3>
+                <p class="role">Frontend Developer, GDG Speaker</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================
+         SCHEDULE SECTION
+         =================================== -->
+    <section id="schedule">
+        <div class="container">
+            <h2>Event Schedule</h2>
+            <p>
+                The event will feature engaging talks on frontend development, interactive workshops, 
+                networking sessions, and a comprehensive Q&A segment. Join us for a full day of learning 
+                and collaboration with industry experts and fellow developers!
+            </p>
+        </div>
+    </section>
+
+    <!-- ===================================
+         REGISTER SECTION
+         =================================== -->
+    <section id="register">
+        <div class="container">
+            <h2>Register Now</h2>
+            <p>Secure your spot at GDG DevFest 2026. Registration is free and open to all!</p>
+            <div class="btn-container">
+                <button class="btn btn-primary" id="registerBtn">Register Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================
+         FOOTER
+         =================================== -->
+    <footer>
+        <div class="container">
+            <p>
+                GDG DevFest is a community-driven tech conference bringing together developers from 
+                around the world to learn, share, and connect.
+            </p>
+            <div class="social-links">
+                <a href="#" aria-label="Twitter">Twitter</a>
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="Facebook">Facebook</a>
+            </div>
+            <p class="copyright">&copy; 2026 GDG DevFest | SAGE University Indore</p>
+        </div>
+    </footer>
+
+    <!-- ===================================
+         REGISTRATION MODAL
+         =================================== -->
+    <div class="modal" id="registrationModal">
+        <div class="modal-content">
+            <!-- Form Container -->
+            <div id="formContainer">
+                <h2>Event Registration</h2>
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="organization">College/Company</label>
+                        <input type="text" id="organization" name="organization" placeholder="SAGE University Indore">
+                    </div>
+                    <div class="modal-buttons">
+                        <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Success Message Container -->
+            <div id="successContainer" class="success-message" style="display: none;">
+                <h2>✓ Registration Successful!</h2>
+                <p>Thank you for registering. See you at GDG DevFest 2026.</p>
+                <button class="btn btn-primary" id="closeSuccessBtn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
